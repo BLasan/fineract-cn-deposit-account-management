@@ -47,7 +47,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @SuppressWarnings("unused")
-@FeignClient(value = "deposit-v1", path = "/deposit/v1", configuration = CustomFeignClientsConfiguration.class)
+@FeignClient(path = "/deposit/v1", url = "http://${kubernetes.service.name}:{server.port}", configuration = CustomFeignClientsConfiguration.class)
 public interface DepositAccountManager {
 
   @RequestMapping(

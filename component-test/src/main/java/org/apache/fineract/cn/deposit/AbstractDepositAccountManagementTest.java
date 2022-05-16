@@ -112,7 +112,7 @@ public abstract class AbstractDepositAccountManagementTest extends SuiteTestEnvi
   @Configuration
   @EnableEventRecording
   @EnableFeignClients(basePackages = {"org.apache.fineract.cn.deposit.api.v1"})
-  @RibbonClient(name = APP_NAME)
+  // @RibbonClient(name = APP_NAME)
   @Import({DepositAccountManagementConfiguration.class})
   @ComponentScan("org.apache.fineract.cn.deposit.listener")
   public static class TestConfiguration {
